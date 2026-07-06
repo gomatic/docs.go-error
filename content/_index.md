@@ -15,7 +15,7 @@ go get github.com/gomatic/go-error
 
 ## Why constant errors
 
-Comparing errors by their message string is brittle: a reworded message silently breaks every caller that matched on it. `errs.Const` makes each error a typed constant, so callers match the *identity* of the error, not its text — and the compiler keeps the value in one place.
+Comparing errors by their message string is brittle: a reworded message silently breaks every caller that matched on it. `errs.Const` makes each error a typed constant, so callers match the _identity_ of the error, not its text — and the compiler keeps the value in one place.
 
 The library owns the **mechanism only** — it ships no error values. Every consumer declares its own sentinels in its own package:
 
